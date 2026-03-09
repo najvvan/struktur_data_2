@@ -1,7 +1,7 @@
 # Review Dasar-dasar C++
 
 ## Hello, World!
-Program akan meminta *input* untuk variabel ```angka``` dan ```huruf``` dari pengguna melalui ```cin```, dan meng-*print output* melalui ```cout``` dan ```puts```.
+Program C++ paling dasar yang hanya menampilkan tulisan ke layar menggunakan cout. Program ini tidak menerima input dari pengguna..
 
 **Kode**:
 ```cpp
@@ -19,11 +19,26 @@ int main()
 
 ![Output File input_output.cpp](img/output_helloworld.png)
 
+## Puts Name
+Program ini menampilkan sebuah teks ke layar menggunakan fungsi puts(). Fungsi puts() berasal dari bahasa C dan digunakan untuk mencetak string diikuti baris baru.
 
+**Kode**:
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
 
+int main(){
+    puts("Najwan Sigit Cahya Buana");
+    return 0;
+}
+```
+
+**Output**:
+
+![Output File input_output.cpp](img/output_puts.png)
 
 ## Input dan Output
-Program akan meminta *input* untuk variabel ```angka``` dan ```huruf``` dari pengguna melalui ```cin```, dan meng-*print output* melalui ```cout``` dan ```puts```.
+Program ini meminta pengguna memasukkan sebuah angka dan satu huruf melalui keyboard menggunakan cin. Setelah itu, program menampilkan kembali nilai yang dimasukkan menggunakan kombinasi puts() dan cout.
 
 **Kode**:
 ```cpp
@@ -52,7 +67,9 @@ int main() {
 
 
 ## Control Flow
-Program akan menentukan apakah angka yang di-*input* pengguna termasuk ke dalam bilangan ganjil atau genap.
+Program ini membaca sebuah angka dari pengguna, lalu menggunakan percabangan if-else untuk menentukan apakah angka tersebut termasuk bilangan genap atau ganjil.
+
+Jika angka habis dibagi 2 maka akan ditampilkan "Even", jika tidak maka ditampilkan "Odd".
 
 **Kode**:
 ```cpp
@@ -74,7 +91,9 @@ int main() {
 ![Output File control_flow.cpp](img/output_controlflow.png)
 
 ## Loop
-Program akan menjalankan program secara berulang (*looping*) sebanyak ```n``` kali (sesuai dengan apa yang di-*input* pengguna) hingga membentuk sebuah pola angka yang nilainya terus bertambah dengan bentuk segitiga.
+Program ini menggunakan perulangan bersarang (nested loop) untuk menampilkan pola angka berbentuk segitiga.
+
+Jumlah baris pola ditentukan oleh input pengguna. Angka yang dicetak terus bertambah setiap kali dicetak.
 
 **Kode**:
 ```cpp
@@ -101,8 +120,10 @@ int main() {
 
 ![Output File loop.cpp](img/output_loop.png)
 
-## Function 1 (Huruf)
-Program akan menggunakan fungsi ```check_letter``` untuk menentukan apakah huruf yang di-*input* pengguna merupakan huruf vokal atau konsonan.
+## Function 1
+Program ini menggunakan fungsi bernama check_letter untuk mengecek apakah huruf yang dimasukkan pengguna termasuk huruf vokal atau konsonan.
+
+Fungsi akan membandingkan huruf input dengan daftar huruf vokal (a, i, u, e, o dalam huruf kecil maupun besar). Jika cocok maka ditampilkan "Vowel", jika tidak maka "Consonant".
 
 **Kode**:
 ```cpp
@@ -131,8 +152,15 @@ int main() {
 
 ![Output File function.cpp](img/output_function1.png)
 
-## Function 2 (Bilangan Prima)
-Program akan meng-*print* semua bilangan prima yang berada di dalam *range* angka yang telah ditentukan pengguna. Program akan menggunakan fungsi ```isPrime``` untuk menentukan apakah bilangan tersebut merupakan bilangan prima atau tidak, dan fungsi ```findPrimes``` untuk mencari bilangan-bilangan prima yang terdapat di dalam *range* yang telah ditentukan oleh pengguna.
+## Function 2
+Program ini menampilkan semua bilangan prima dalam rentang angka yang dimasukkan pengguna.
+
+Terdapat dua fungsi:
+
+-isPrime(n) → mengecek apakah sebuah angka merupakan bilangan prima
+-findPrimes(left, right) → mencari semua bilangan prima dalam rentang
+
+Jika tidak ada bilangan prima dalam rentang tersebut, program akan menampilkan pesan khusus.
 
 **Kode**:
 ```cpp
@@ -175,7 +203,13 @@ int main() {
 ![Output File function2.cpp](img/output_function2.png)
 
 ## Array
-Program akan menentukan nilai minimum menggunakan fungsi ```getMin``` dan maksimum menggunakan fungsi ```getMax``` dari *array* yang telah di-*input* pengguna.
+Program ini membaca sejumlah elemen array dari pengguna, kemudian mencari nilai terkecil dan terbesar.
+
+Dua fungsi digunakan:
+-getMin() untuk mencari nilai minimum
+-getMax() untuk mencari nilai maksimum
+
+Hasil akhirnya menampilkan nilai minimum dan maksimum dari array..
 
 **Kode**:
 ```cpp
@@ -215,7 +249,14 @@ int main() {
 ![Output File array.cpp](img/output_array.png)
 
 ## Pointers
-Program akan meng-*print* nilai dan alamat dari variabel ```var```, serta nilai yang disimpan di *pointer* ```ptr``` dan nilai yang ditunjuk oleh ```ptr``` menggunakan *dereference operator*.
+Program ini menunjukkan cara kerja pointer pada C++.
+
+Pointer ptr menyimpan alamat memori dari variabel var. Program kemudian menampilkan:
+
+-nilai variabel
+-alamat memori variabel
+-alamat yang disimpan pointer
+-nilai yang ditunjuk oleh pointer (dereference)
 
 **Kode**:
 ```cpp
@@ -242,7 +283,7 @@ int main() {
 ![Output File pointers.cpp](img/output_pointers.png)
 
 ## String
-Program akan menentukan *size* dari *string* ```str``` yang di-*input* pengguna menggunakan ```str.size()```.
+Program ini membaca sebuah kata atau teks dari pengguna ke dalam variabel string, lalu menampilkan jumlah karakter yang dimiliki string tersebut menggunakan fungsi .size().
 
 **Kode**:
 ```cpp
